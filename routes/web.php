@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MembersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +36,10 @@ Route::get('/auth/{provider}/redirect',[ProviderController::class,'redirect']);
 Route::get('/auth/{provider}/callback',[ProviderController::class,'callback']);
 Route::get('/admin', [AdminController::class, 'admin']);
 Route::post('/add-subjects',[AdminController::class,'add_subjects'])->name('add-subjects');
+Route::get('/members',[MembersController::class,'show']);
+Route::get('delete/{id}',[MembersController::class,'delete']);
+Route::get('edit/{id}',[MembersController::class,'edit']);
+Route::post('edit',[MembersController::class,'update']);
 
 Route::get('/home', function () {
     return view('home');
