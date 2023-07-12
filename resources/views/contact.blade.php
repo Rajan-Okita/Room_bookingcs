@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h1>Welcome to the Contacts Page</h1>
+                    <h1>You can contact us at...</h1>
                 </div>
             </div>
         </div>
