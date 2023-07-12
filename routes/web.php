@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\ProviderController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,8 @@ Route::middleware('auth')->group(function () {
 Route::get('/auth/{provider}/redirect',[ProviderController::class,'redirect']);
 
 Route::get('/auth/{provider}/callback',[ProviderController::class,'callback']);
-
+Route::get('/admin', [AdminController::class, 'admin']);
+Route::post('/add-subjects',[AdminController::class,'add_subjects'])->name('add-subjects');
 
 
 require __DIR__.'/auth.php';
