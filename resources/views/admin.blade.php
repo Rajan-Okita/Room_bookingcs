@@ -46,7 +46,7 @@
                         <input type="time" name="end_time" value="{{old('end_time')}}">
                         <span class="text-danger">@error('end_time'){{$message}} @enderror
                     </div>
-                    <br>
+                        <br>
                     <div class="form-group">
                         <button class="btn btn-block btn-primary" type="submit">Add value</button>
                     </div>
