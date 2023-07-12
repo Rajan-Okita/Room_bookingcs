@@ -36,5 +36,12 @@ Route::get('/auth/{provider}/callback',[ProviderController::class,'callback']);
 Route::get('/admin', [AdminController::class, 'admin']);
 Route::post('/add-subjects',[AdminController::class,'add_subjects'])->name('add-subjects');
 
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
 
 require __DIR__.'/auth.php';
