@@ -48,13 +48,23 @@ Route::post('try',[TimetableController::class,'update_timetables']);
 Route::get('/adminDashboard',function(){
     return view('adminDashboard');
 });
-//Route::get('/members',function(){
-//    return view('list');
-//});
+Route::get('/members',function(){
+    return view('list');
+});
 
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/booking', function () {
+    return view('booking');
+});
+
+Route::get('/rooms', function () {
+    return view('rooms');
+});
+
+
+Route::get('/contacts', function () {
+    return view('contacts');
+
 });
 
 require __DIR__.'/auth.php';
