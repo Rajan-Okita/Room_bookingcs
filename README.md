@@ -1,66 +1,70 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 style="text-align: center;">
+    Room Booking
+</h1>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<h2 style="text-align: center;">
+   An online platform for students to book study rooms
+</h2>
 
-## About Laravel
+### Abstract
+The web application allows users to be able to view classes that are empty, and they can be able to book the venue depending on the availability. The users upon login, they can be able to search for empty rooms based on various criteria e.g., date, time, location and specific requirements (individual study or group studies). The system will present details such as room capacity and room location. Filter options will be available for users to be able to refine their search based on their preference. The web application will feature a user-friendly interface accessible through standard web browsers, enabling students to view and interact with the system. The application will utilize a centralized database that stores information about the school's room inventory, including room availability, and capacity. Overall, this web application aims to simplify the process of finding and booking empty rooms within a school environment, empowering students to efficiently manage their study and collaborative activities while maximizing the utilization of available resources.
+# Installation Guide
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This guide provides step-by-step instructions to install a Laravel project that requires Laravel, Node.js, and MySQL.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Prerequisites
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Before you begin, make sure you have the following software installed on your machine:
 
-## Learning Laravel
+- PHP (version >= 7.3)
+- Composer
+  https://getcomposer.org/download/
+- Node.js (version >= 12.x)
+- npm
+  https://nodejs.org/en/download
+- MySQL (version >= 5.7)
+  https://www.mysql.com/downloads/
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Clone the Repository
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Clone the project repository from GitHub:
+https://github.com/jeremy-riu/CS_breeze.git
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Install PHP Dependencies
 
-## Laravel Sponsors
+Install the required PHP dependencies using Composer:
+$composer install
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Configure Environment Variables
 
-### Premium Partners
+Create a copy of the `.env.example` file and name it `.env`. Update the necessary environment variables such as database credentials, app key, etc.:
+$ cp .env.example .env
+$ nano .env
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+## Generate Application Key
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Generate a unique application key using the following command:
+$ php artisan key:generate
 
-## Code of Conduct
+## Set Up the Database
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Create a new MySQL database for your application and update the `.env` file with the database name, username, and password.
 
-## Security Vulnerabilities
+## Migrate the Database
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Run the database migrations to create the required tables:
+$ php artisan migrate
 
-## License
+## Serve the Application
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Start the development server to run your Laravel application:
+$ php artisan serve
+
+## Access the Application
+
+Open your web browser and visit `http://localhost:8000` to access your Laravel application.
+
+Congratulations! You have successfully installed the Laravel project with Laravel, Node.js, and MySQL. Feel free to explore the application and customize it according to your needs.
+
+If you encounter any issues during the installation process, refer to the official documentation or seek help from the Laravel community.
