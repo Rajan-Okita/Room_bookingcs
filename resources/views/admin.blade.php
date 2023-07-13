@@ -29,6 +29,11 @@
                         <input type="text" name="location" placeholder="Enter subject location" value="{{old('location')}}">
                         <span class="text-danger">@error('location'){{$message}} @enderror
                     </div>
+                        <div class="form-group">
+                            <label for="Slots">Slots</label>
+                            <input type="number" name="slots" placeholder="Enter number of slots" value="{{old('slots')}}">
+                            <span class="text-danger">@error('slots'){{$message}} @enderror
+                        </div>
                     <div class="form-group">
                         <label for="Day of week">Day of week</label>
                         <input type="text" name="days" placeholder="Enter day" value="{{old('days')}}">
