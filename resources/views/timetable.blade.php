@@ -20,7 +20,7 @@
             <td>{{$timetable['days']}}</td>
             <td>{{$timetable['start_time']}}</td>
             <td>{{$timetable['end_time']}}</td>
-            <td><a href={{"delete/".$timetable['id']}}>Delete</a>
+            <td><a href={{"clear/".$timetable['id']}}>Delete</a>
                 <a href={{"update/".$timetable['id']}}>Edit</a>
             </td>
         </tr>
