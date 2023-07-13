@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('subject');
             $table->string('location');
+            $table->integer('slots');
             $table->string('days');
             $table->time('start_time');
             $table->time('end_time');
