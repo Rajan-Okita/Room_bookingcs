@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MembersController;
+use App\Http\Controllers\TimetableController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,10 @@ Route::get('/members',[MembersController::class,'show']);
 Route::get('delete/{id}',[MembersController::class,'delete']);
 Route::get('edit/{id}',[MembersController::class,'edit']);
 Route::post('edit',[MembersController::class,'update']);
+Route::get('/timetable',[TimetableController::class,'show_timetables']);
+Route::get('delete/{id}',[TimetableController::class,'delete_timetables']);
+Route::get('edit/{id}',[TimetableController::class,'edit_timetables']);
+Route::post('edit',[TimetableController::class,'update_timetables']);
 
 Route::get('/home', function () {
     return view('home');
