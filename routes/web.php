@@ -48,9 +48,9 @@ Route::post('try',[TimetableController::class,'update_timetables']);
 Route::get('/adminDashboard',function(){
     return view('adminDashboard');
 });
-//Route::get('/members',function(){
-//    return view('list');
-//});
+Route::get('/members',function(){
+    return view('list');
+});
 
 
 Route::get('/booking', function () {
