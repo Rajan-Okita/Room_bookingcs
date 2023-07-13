@@ -1,3 +1,5 @@
+@extends("adminDashboard")
+@section("content")
 <h1>Members list</h1>
 
 <table border="1">
@@ -22,6 +24,7 @@
 <span>
     {{$members->links()}}
 </span>
+@endsection
 
 <style>
     .w-5{

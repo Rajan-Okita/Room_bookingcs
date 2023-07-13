@@ -20,7 +20,7 @@ class TimetableController extends Controller
     function edit_timetables($id)
     {
         $data= Admin::find($id);
-        return view('editProducts',['data'=>$data]);
+        return view('editProducts ',['data'=>$data]);
     }
     function update_timetables(Request $req)
     {

@@ -21,7 +21,7 @@
             <td>{{$timetable['start_time']}}</td>
             <td>{{$timetable['end_time']}}</td>
             <td><a href={{"delete/".$timetable['id']}}>Delete</a>
-                <a href={{"edit/".$timetable['id']}}>Edit</a>
+                <a href={{"update/".$timetable['id']}}>Edit</a>
             </td>
         </tr>
     @endforeach

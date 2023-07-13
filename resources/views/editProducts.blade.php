@@ -1,6 +1,6 @@
-<h1>Update Products</h1>
+<h1>Update Timetable</h1>
 
-<form action="/edit" method="post">
+<form action="/try" method="post">
     @csrf
     <input type="hidden" name="id" value="{{$data['id']}}">
     <label for="name">Subject</label> <br>
