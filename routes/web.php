@@ -46,8 +46,18 @@ Route::get('delete/{id}',[TimetableController::class,'delete_timetables']);
 Route::get('edit/{id}',[TimetableController::class,'edit_timetables']);
 Route::post('edit',[TimetableController::class,'update_timetables']);
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/booking', function () {
+    return view('booking');
+});
+
+Route::get('/rooms', function () {
+    return view('rooms');
+});
+
+
+Route::get('/contacts', function () {
+    return view('contacts');
+
 });
 
 require __DIR__.'/auth.php';
