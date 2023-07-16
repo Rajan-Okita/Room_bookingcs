@@ -22,6 +22,9 @@
                             <a class="nav-link" href="rooms">Rooms</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="gettimetables">View Time Table</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link btn btn-sm btn-success" href="booking">Booking</a>
                         </li>
                         <li class="nav-item dropdown">

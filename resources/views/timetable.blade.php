@@ -1,3 +1,5 @@
+{{--@extends("adminDashboard")--}}
+{{--@section("content")--}}
 <h1>Timetables</h1>
 
 <table border="1">
@@ -30,7 +32,7 @@
 <span>
     {{$timetables->links()}}
 </span>
-
+{{--//@endsection--}}
 <style>
     .w-5{
         display:none;

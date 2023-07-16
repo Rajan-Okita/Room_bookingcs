@@ -30,4 +30,6 @@ class MembersController extends Controller
         $data->save();
         return redirect('members');
     }
+
+
 }

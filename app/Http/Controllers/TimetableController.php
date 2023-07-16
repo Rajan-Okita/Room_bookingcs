@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use Session;
 
 class TimetableController extends Controller
 {
     function show_timetables(){
-        $data=Admin::paginate(5);
+        $data=Admin::paginate(4);
         return view('timetable',['timetables'=>$data]);
     }
     function delete_timetables($id)
@@ -17,6 +18,12 @@ class TimetableController extends Controller
         $data->delete();
         return redirect('timetable');
     }
+    public function gettimetables(){
+        $timetables = Admin::all();
+        session(['alltimetables' => $timetables]);
+        return view('viewmytables');
+    }
+
     function edit_timetables($id)
     {
         $data= Admin::find($id);

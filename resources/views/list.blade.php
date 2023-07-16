@@ -3,13 +3,14 @@
 <h1>Members list</h1>
 
 <table border="1">
+    <div class="table-responsive">
     <tr>
         <td>Id</td>
         <td>Name</td>
         <td>Email</td>
         <td>Operation</td>
     </tr>
-    @foreach($members as $member )
+    @foreach($members as $member)
     <tr>
         <td>{{$member['id']}}</td>
         <td>{{$member['name']}}</td>
@@ -19,8 +20,8 @@
         </td>
     </tr>
     @endforeach
+    </div>
 </table>
-
 <span>
     {{$members->links()}}
 </span>
