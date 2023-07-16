@@ -8,6 +8,45 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Room-Booking</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="dashboard">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="rooms">Rooms</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gettimetables">View Time Table</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active btn btn-sm btn-success" href="booking">Booking</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        About Us
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="contacts">Contacts</a></li>
+                        <li><a class="dropdown-item" href="https://strathmore.edu/">Socials</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge badge-pill badge-danger">4</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="bg-dark col-auto col-md-2 min-vh-100">

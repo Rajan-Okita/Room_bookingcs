@@ -22,6 +22,9 @@
                             <a class="nav-link" href="rooms">Rooms</a>
                         </li>
                         <li class="nav-item">
+                        <a class="nav-link" href="gettimetables">View Time Table</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link active btn btn-sm btn-success" href="booking">Booking</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -37,7 +40,6 @@
                 </div>
             </div>
         </nav>
-    </x-slot>
 
     <div class="table-responsive">
         <tr>
@@ -58,11 +60,17 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit" class="btn btn-primary" />
+                <input type="submit" class="btn btn-primary text-dark"/>
             </td>
         </tr>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </x-slot>
 </x-app-layout>
+
+
+
+
 </body>
 </html>

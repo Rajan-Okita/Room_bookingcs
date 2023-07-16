@@ -22,6 +22,9 @@
                             <a class="nav-link" href="rooms">Rooms</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="gettimetables">View Time Table</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link btn btn-sm btn-success" href="booking">Booking</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -69,17 +72,6 @@
 
         <div class="container my-4 ">
             <h1 class="text-center border-bottom">Services</h1>
-            <div class="row my-4">
-                <div class="col-md-4">
-                    <img src="{{ URL('img/IMG_1913.jpg_resized-scaled.jpg')  }}" class="img-thumbnail" alt="placeholder">
-                </div>
-                <div class="col-md-8"></div>
-                <h3>Service Heading</h3>
-                <p></p>
-                <p>
-                    <a href="#" class="btn btn-sm btn-primary">Read More</a>
-                </p>
-            </div>
         </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </x-slot>

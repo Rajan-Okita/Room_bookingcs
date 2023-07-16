@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MembersController;
 use App\Http\Controllers\TimetableController;
+use App\Http\Controllers\SlotsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,15 +45,18 @@ Route::post('edit',[MembersController::class,'update']);
 Route::get('/timetable',[TimetableController::class,'show_timetables']);
 Route::get('clear/{id}',[TimetableController::class,'delete_timetables']);
 Route::get('update/{id}',[TimetableController::class,'edit_timetables']);
+Route::get('/locations',[SlotsController::class,'empty_locations']);
+Route::get('/slots',[SlotsController::class,'empty_locations'])->name('find.empty.locations');
+Route::post('/slots',[SlotsController::class,'empty_locations'])->name('find.empty.locations');
 Route::post('try',[TimetableController::class,'update_timetables']);
 Route::get('/adminDashboard',function(){
     return view('adminDashboard');
 });
-Route::get('/members',function(){
-    return view('list');
-});
+//Route::get('/members',function(){
+//    return view('list');
+//});
 
-
+Route::get('gettimetables',[TimetableController::class,'gettimetables']);
 Route::get('/booking', function () {
     return view('booking');
 });
@@ -67,4 +71,8 @@ Route::get('/contacts', function () {
 
 });
 
+Route::get('/notification', function () {
+    return view('notification');
+
+});
 require __DIR__.'/auth.php';
