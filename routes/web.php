@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\ProviderController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MembersController;
 use App\Http\Controllers\TimetableController;
 use App\Http\Controllers\SlotsController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +25,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+//Route::get('/dashboard', function () {
+//    return view('dashboard');
+//})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -74,5 +76,21 @@ Route::get('/contacts', function () {
 Route::get('/notification', function () {
     return view('notification');
 
+});
+
+Auth::routes();
+Route::middleware(['auth','user-role:user'])->group(function()
+{
+    Route::get("/dashboard",[HomeController::class, 'userHome'])->name('dashboard');
+});
+
+Route::middleware(['auth','user-role:editor'])->group(function()
+{
+    Route::get("/adminDashboard",[HomeController::class, 'editorHome'])->name('adminDashboard');
+});
+
+Route::middleware(['auth','user-role:admin'])->group(function()
+{
+    Route::get("/adminDashboard",[HomeController::class, 'adminHome'])->name('adminDashboard');
 });
 require __DIR__.'/auth.php';
