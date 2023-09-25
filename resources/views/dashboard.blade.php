@@ -24,9 +24,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="gettimetables">View Time Table</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-sm btn-success" href="booking">Booking</a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link btn btn-sm btn-success" href="booking">Booking</a>--}}
+{{--                        </li>--}}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 About Us
