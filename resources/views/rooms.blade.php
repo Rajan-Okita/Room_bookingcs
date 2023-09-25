@@ -44,15 +44,20 @@
             <form action="{{ route('find.empty.locations') }}" method="post">
             @csrf
             <label for="target_day">Day:</label>
-            <input type="text" name="target_day" id="target_day" required value="{{old('target_day')}}"/>
+                <select name="target_day" id="target_day">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                </select>
 
             <label for="start_time">Start Time:</label>
             <input type="time" name="start_time" id="start_time" required value="{{old('start_time')}}"/>
 
             <label for="end_time">End Time:</label>
-            <input type="time" name="end_time" id="end_time" required value="{{old('end_time')}}"/>
-
-            <button type="submit">Find Empty Locations</button>
+            <input type="time" name="end_time" id="end_time" required value="{{old('end_time')}}"/><br><br>
+                <button type="submit">Find Empty Locations</button>
             </form>
 
             @if(isset($emptyLocations))

@@ -9,7 +9,7 @@ use Session;
 class TimetableController extends Controller
 {
     function show_timetables(){
-        $data=Admin::paginate(4);
+        $data=Admin::paginate(10);
         return view('timetable',['timetables'=>$data]);
     }
     function delete_timetables($id)

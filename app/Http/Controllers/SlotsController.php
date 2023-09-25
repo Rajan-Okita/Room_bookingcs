@@ -29,7 +29,7 @@ class SlotsController extends Controller
                     ->where('end_time', '<=', $targetEndTime);
             })
             ->distinct()
-            ->select('id', 'location')
+            ->select( 'location')
             ->get();
 
         $emptyLocations = collect($emptyLocations->toArray())->all();
